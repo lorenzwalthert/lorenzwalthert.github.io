@@ -73,7 +73,12 @@ ul, ol, dl, figure,
     margin-bottom: 0.5cm;
     margin-top: 0.5cm;
 }
-
+a.anchor {
+    display: block;
+    position: relative;
+    top: -40px;
+    visibility: hidden;
+}
 
 hr{
     /* Inset, by Dan Eden */
