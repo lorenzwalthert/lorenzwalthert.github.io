@@ -2,6 +2,7 @@
 # need to install the servr package.
 
 all:
+  # kill $(ps aux | grep '[j]ekyll serve$' | awk '{print $2}')
 	Rscript -e "servr::jekyll('..')"
 
 clean:

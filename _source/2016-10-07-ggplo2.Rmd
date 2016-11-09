@@ -1,13 +1,13 @@
 ---
-layout: post
 title: "Programming with ggplot2"
+description: How you can make ggplot really flexible and apply to a lot of different
+  data types.
+date: "2016-10-7 20:25"
 permalink: /anonblogentry/
-date: 2016-10-7 20:25
-description: "How you can make ggplot really flexible and apply to a lot 
-  of different data types."
-tags: jekyll ggplot2
+tags: ggplot2
+layout: post
 ---
-Look at the pre-processed data below.
+Look at the subset of the `diamonds` dataset below.
 ```{r, message=FALSE}
 library("tidyverse")
 source("multiplot.R") # http://www.cookbook-r.com/Graphs/Multiple_graphs_on_one_page_(ggplot2)/
@@ -20,7 +20,7 @@ dta <- select(diamonds, price, cut, carat, color)
 Now, imagine you want a quick summary for each variable. Unfortunately, the 
 variabels are not all of the same class.
 For the factors, you could do a bar chart, for the integers, you might wan to
-use a histogram. You could do the following for cut and color.
+use a density plot. You could do the following for cut and color.
 ```{r}
 p1 <- ggplot(dta, aes(cut)) + geom_bar()
 p2 <- ggplot(dta, aes(color)) + geom_bar()

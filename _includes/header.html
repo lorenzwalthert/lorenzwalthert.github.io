@@ -6,17 +6,21 @@
       <div class="trigger">
 
 
-        <!-- auto generated header -->
+        <!-- auto generated header
 
         {% for page in site.pages %}
           {% if page.title %}
           <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
           {% endif %}
         {% endfor %}
+        -->
 
 
         <!-- {{ site.title }} instead of blog -->
         <a class="page-link" href="{{ site.baseurl }}/">blog</a>
+        <a class="page-link" href="{{ site.baseurl }}/portfolio/">portfolio</a>
+        <a class="page-link" href="{{ site.baseurl }}/shiny/">shiny</a>
+
         <a class="page-link" href="{{ site.baseurl }}/about/">about</a>
         <a class="page-link" href="{{ site.baseurl }}/Compare_Settlements.html">ggplot2</a>
 
