@@ -3,7 +3,7 @@ title: "software development"
 layout: page
 permalink: /development/
 ---
-Recently, I have been involved in two projects related to 
+Recently, I have been involved in the following projects related to 
 software development: 
 
 - *refactor. Better factor handling with R.* This is an 

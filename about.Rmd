@@ -30,6 +30,9 @@ out my [LinkedIn](https://ch.linkedin.com/in/lorenzwalthert) profile.
 	<a href="https://twitter.com/lorenzwalthert" target="_blank"><i class="fa fa-twitter-square"></i></a>
 </span>
 
+<!--
+
 <div class="col three caption">
 	You can even add a little note about which of these is the best way to reach you.
 </div>
+-->
