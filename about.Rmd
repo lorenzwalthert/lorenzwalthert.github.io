@@ -4,7 +4,7 @@ layout: page
 permalink: /about/
 ---
 <html>
-<img src = "../images/profile_picture.JPG" align = "right" width = "300px" 
+<img src = "../images/profile_picture.JPG" align = "right" width = "320px" 
  hspace = "20">
 </html>
 
@@ -30,9 +30,6 @@ out my [LinkedIn](https://ch.linkedin.com/in/lorenzwalthert) profile.
 	<a href="https://twitter.com/lorenzwalthert" target="_blank"><i class="fa fa-twitter-square"></i></a>
 </span>
 
-<!--
-
 <div class="col three caption">
-	You can even add a little note about which of these is the best way to reach you.
+	Not everything that can be counted counts, and not everything that counts can be counted. Albert Einstein, Physicist
 </div>
--->

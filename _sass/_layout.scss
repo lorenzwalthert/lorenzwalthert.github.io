@@ -25,7 +25,8 @@ color: $theme-color;
     }
 }
 .site-nav {
-float: right;
+display: flex;
+justify-content: space-between;
 line-height: $nav-height;
 .page-link{
 line-height: $base-line-height;
@@ -40,7 +41,6 @@ top: 0px;
 right: 10px;
 text-align: right;
 &:hover .trigger {
-display: block;
 padding-bottom: 5px;
         }
 .page-link {
