@@ -27,6 +27,10 @@ collections:
     output: true
     permalink: /poetry/:path/
 
+# analytics
+google_analytics: UA-87289893-1
+
+
 
 # include
 include: ["_source", "tags"]

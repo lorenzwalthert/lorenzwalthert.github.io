@@ -5,6 +5,7 @@ permalink: /shiny/
 ---
 Here are some web apps I created with the [shiny package](http://shiny.rstudio.com).
 <br/>
+
 ### Wordcloud (beta)
 With this app, you can upload a text or a table with words and create a 
 highly cumstomizable wordcloud. And download it.
