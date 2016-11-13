@@ -31,6 +31,6 @@ collections:
 
 # include
 include: ["_source", "tags"]
-exclude: ["*.Rmd"] # exclude all rmd files.
+exclude: ["*.Rmd", "*-draft.md"] # exclude all rmd files.
 
 

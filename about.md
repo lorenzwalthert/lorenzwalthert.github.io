@@ -24,7 +24,7 @@ out my [LinkedIn](https://ch.linkedin.com/in/lorenzwalthert) profile.
 <hr/>
 <br/>
 <span class="contacticon center">
-	<a href="mailto:lorenz.walthert@icloud.com"><i class="fa fa-envelope-square"></i></a>
+<!--	<a href="mailto:lorenz.walthert@icloud.com"><i class="fa fa-envelope-square"></i></a> -->
 	<a href="https://github.com/lorenzwalthert" target="_blank"><i class="fa fa-github-square"></i></a>
 	<a href="https://ch.linkedin.com/in/lorenzwalthert" target="_blank"><i class="fa fa-linkedin-square"></i></a>
 	<a href="https://twitter.com/lorenzwalthert" target="_blank"><i class="fa fa-twitter-square"></i></a>
