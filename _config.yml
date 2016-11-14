@@ -13,8 +13,9 @@ markdown: kramdown
 
 highlighter: rouge
 
-# Pagination
-gems: [jekyll-paginate]
+# Pagination + # github pagse atom feed
+
+gems: [jekyll-paginate, jekyll-feed]
 paginate: 15
 paginate_path: "/blog/page:num/"
 
@@ -30,9 +31,7 @@ collections:
 # analytics
 google_analytics: UA-87289893-1
 
-# github pagse atom feed
-gems:
-  - jekyll-feed
+
 
 # include
 include: ["_source", "tags"]
