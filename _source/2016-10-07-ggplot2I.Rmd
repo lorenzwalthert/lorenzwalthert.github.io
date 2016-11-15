@@ -65,7 +65,7 @@ p4 <- ggplot(dta, aes(carat)) + geom_density()
 # create a plot with 4 panels
 multiplot(p1, p2, p3, p4, cols = 2)
 ```
-![](https://github.com/lorenzwalthert/lorenzwalthert.github.io/tree/devel/_posts/2016-10-07_initial.png)
+![](https://github.com/lorenzwalthert/lorenzwalthert.github.io/raw/devel/_source/2016-10-07_initial.png)
 <br/>
 
 Now, you can note two issues:
@@ -191,7 +191,7 @@ Finally, we can plot the result.
 # use plotlist not ... as input
 do.call("multiplot", list(plotlist = all_plots, cols = 2)) 
 ```
-![](https://github.com/lorenzwalthert/lorenzwalthert.github.io/tree/devel/_posts/2016-10-07_final.png)
+![](https://github.com/lorenzwalthert/lorenzwalthert.github.io/raw/devel/_source/2016-10-7_final.png)
 
 ## Conclusion
 <br/>
