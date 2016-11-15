@@ -205,7 +205,7 @@ be called for the different data types. The solution presented above is
 scalable to data sets with an arbitrary number of columns without altering the 
 code.
 
-## Outlook
+## Outlookk
 <br/>
 We will expand on this by customizing the appearance of the plots further.
 Namely, the second part of the series centers on using a log-transformed
