@@ -2,8 +2,8 @@
 title: "Rsome - A blog about some R stuff"
 description: > # this means to ignore newlines until "baseurl:"
   A simple, whitespace, helvetica based portfolio theme.
-baseurl:  # the subpath of your site, e.g. /blog/
-url:  https://lorenzwalthert.github.io #the base hostname & protocol for your site
+baseurl: # the subpath of your site, e.g. /blog/
+url: https://lorenzwalthert.github.io # the base hostname & protocol for your site
 twitter_username: lorenzwalthert
 github_username: lorenzwalthert
 linkedin_username: lorenzwalthert
