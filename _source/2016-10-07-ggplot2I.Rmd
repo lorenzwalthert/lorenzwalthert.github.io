@@ -60,10 +60,12 @@ Similarly, you can do for price and carat
 ```{r}
 p3 <- ggplot(dta, aes(price)) + geom_density()
 p4 <- ggplot(dta, aes(carat)) + geom_density()
-
+```
+```{r, eval = FALSE}
 # create a plot with 4 panels
 multiplot(p1, p2, p3, p4, cols = 2)
 ```
+![](https://github.com/lorenzwalthert/lorenzwalthert.github.io/tree/devel/_posts/2016-10-07_initial.png)
 <br/>
 
 Now, you can note two issues:
@@ -182,12 +184,14 @@ all_plots <- lapply(names(dta), function(g) {
   }
 )
 
+```
 
-##  ............................................................................
-##  compose plots
+Finally, we can plot the result.
+```{r, eval = FALSE}
 # use plotlist not ... as input
 do.call("multiplot", list(plotlist = all_plots, cols = 2)) 
 ```
+![](https://github.com/lorenzwalthert/lorenzwalthert.github.io/tree/devel/_posts/2016-10-07_final.png)
 
 ## Conclusion
 <br/>
