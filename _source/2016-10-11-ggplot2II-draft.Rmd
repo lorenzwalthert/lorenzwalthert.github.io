@@ -1,12 +1,12 @@
 ---
-title: "Programming with ggplot2 - Part II"
+title: "Scalable plotting with ggplot2 - Part II"
 description: How can you take advantage of integrating ggplot with core 
   elements of the R language to create more flexible and adaptive plots while 
   reducing redundancy? This series discusses how we can use an lapply approach
   to create column-wise visualizations that adapt to data characteristics such 
   as the class. Part II extends concepts from part I and shows how further 
   customization can be achieved.
-permalink: /proggplotII/
+permalink: /scaleggplotII/
 tags: ggplot2
 layout: post
 comments: true
@@ -14,7 +14,7 @@ comments: true
 ## Introduction
 <br/>
 
-This blog post is the follow-up on [part I](/proggplotI/) on programming with ggplot2. 
+This blog post is the follow-up on [part I](/scaleggplotI/) on programming with ggplot2. 
 After having developed a scalable approach to column-wise and data 
 type-dependent visualization, we will continue to customize our plots. Specifically,
 the focus of this post is how we can use a log-transformed x-axis with nice 
