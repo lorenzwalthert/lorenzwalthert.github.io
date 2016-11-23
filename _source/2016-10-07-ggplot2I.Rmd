@@ -29,7 +29,7 @@ The reader should be familiar with these concepts, otherwise, Hadley Wickham's
 [Advanced R](http://adv-r.had.co.nz) might be a good starting point to read 
 up on all but the first topic.
 
-The approach discussed here generalizes to other situations in which one want 
+The approach discussed here generalizes to other situations in which one wants
 to customize plots based on the characteristics of input data. 
 
 ## The problem
@@ -87,7 +87,7 @@ Now, you can note two issues:
 To address the first problem, we can create a function that
 behaves differently depending on whether the input is factorial or numeric.
 ```{r, eval=FALSE}
-# a function that returns geom_histogramm if the input is numberic, 
+# a function that returns geom_density if the input is numeric, 
 # geom_bar otherwise
 geom_hist_or_bar <- function() {
   if(current_class() %in% c("integer", "numeric")) {
@@ -106,7 +106,7 @@ ggplot(dta, aes(cut))   + geom_hist_or_bar()
 ggplot(dta, aes(price)) + geom_hist_or_bar()
 ggplot(dta, aes(carat)) + geom_hist_or_bar()
 ```
-This is a slight improvement to the first solution, because you always call the
+This is a slight improvement on the first solution, because you always call the
 same functions for all plots. Hence, we can kind of use an `apply` approach to 
 reduce the redundancy of this problem. You might think of the following:
 ```{r, eval=FALSE}
@@ -124,7 +124,7 @@ lapply(names(dta), function(g) ggplot(dta, aes(g)) + geom_hist_or_bar)
 However, we are not quite there yet. Due to non-standard evaluation, we need to 
 further change two things:
 
-* use `_aes` instead of `_aes` so `g` is not actually g, but points to something
+* use `aes_` instead of `aes` so `g` is not actually g, but points to something
   else.
 * use `as.name(g)` instead of `g` because `g` is just the name of an object (i.e. 
   "cut" for the first iteration), not the object itself. 
