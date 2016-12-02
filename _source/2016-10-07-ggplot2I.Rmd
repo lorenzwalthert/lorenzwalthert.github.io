@@ -48,7 +48,7 @@ head(dta)
 Now, imagine you want a visual summary for each variable. Unfortunately, 
 the variables are not all of the same class. Otherwise, you might transform the 
 data into long format and use facets.
-For the factors, you could do a bar chart, for the integers, you might want to
+For the factors, you could do a bar chart, for the numerical variables, you might want to
 use a density plot. Let's have a look at a first approach. You could do the 
 following for cut and color. 
 ```{r}
@@ -106,13 +106,13 @@ ggplot(dta, aes(cut))   + geom_hist_or_bar()
 ggplot(dta, aes(price)) + geom_hist_or_bar()
 ggplot(dta, aes(carat)) + geom_hist_or_bar()
 ```
-This is a slight improvement on the first solution, because you always call the
+This is a slight improvement on the first solution because you always call the
 same functions for all plots. Hence, we can kind of use an `apply` approach to 
 reduce the redundancy of this problem. You might think of the following:
 ```{r, eval=FALSE}
 lapply(dta, function(g) ggplot(dta, aes(g)) + geom_hist_or_bar)
 ```
-Unfortunately, this does not quite work, because for each iteration in 
+Unfortunately, this does not quite work because for each iteration in 
 `lapply`, `g` will be the actual 
 values from each column, but in `aes`, you need the name of the column, not the 
 actual value. Since there is no way to get from the values to the names, but 

@@ -159,6 +159,7 @@ calc_log_breaks <- function(min, max,
 }
 ```
 Let me break these lines into pieces. 
+
 - The basic idea is  to create a sequence of breaks between the minimal and the 
   maximal value of the current data batch using `seq`.
 - Since our plot is going to be on a logarithmic x-axis, we need to create a linear sequence 
