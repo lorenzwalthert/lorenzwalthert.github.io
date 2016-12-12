@@ -268,13 +268,15 @@ all_plots <- lapply(names(dta), function(g) {
 do.call("multiplot", list(plotlist = all_plots, cols = 2)) 
 
 ```
-<img src="https://github.com/lorenzwalthert/lorenzwalthert.github.io/raw/devel/_source/2016-12-12_final.png" width="700px" />
+<img src="https://raw.githubusercontent.com/lorenzwalthert/lorenzwalthert.github.io/devel/_source/2016-12-12_final.png" width="700px" />
 
 
 ## Conclusion
 <br/>
 
-In this blog post, we introduced a new function, `scale_x_adapt` that returns a 
+In this blog post, we wanted to further customize our plots created in the first
+post of the series.
+we introduced a new function, `scale_x_adapt` that returns a 
 predefined scale for a given data type. It can be integrated in our framework 
 similarly to `geom_hist_or_bar`. We created a more general version of 
 `current_class`, `current_property` which takes a function as an argument and 
@@ -282,4 +284,6 @@ allows us evaluate this function to the currently processed data column.
 In our example, this is helpful because using `current_property(min)`
 and `current_property(max)`, we found out the range of the column we are 
 processing and hence construct nice breakpoints with `calc_log_breaks` that were
-used in `scale_x_adapt`.
+used in `scale_x_adapt`. `current_property` is a key function in the framework
+developed here since it can extract any information from the data batch we are 
+processing within `lapply`.
