@@ -6,6 +6,7 @@ description: How can you take advantage of integrating ggplot with core
   to create column-wise visualizations that adapt to data characteristics such 
   as the class. Part II extends concepts from part I and shows how further 
   customization can be achieved.
+date: "2016-12-12 19:57"
 permalink: /scaleggplotII/
 tags: ggplot2
 layout: post
