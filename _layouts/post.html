@@ -13,11 +13,14 @@ layout: default
       {% for tags in page.tags %}
           <a href = "/tags/#{{ tags }}_anch">{{ tags }}</a>
       {% endfor %}
+      </br>
+
+  This article was also published on
+  <a href = "https://www.r-bloggers.com">r-bloggers</a>
+
   </header>
   <article class="post-content">
-  <!--
-  <blockquote>This article also appeared on <a href = "https://www.r-bloggers.com">r-bloggers</a></blockquote>
-  -->
+
     {{ content }}
   </article>
   {% if page.comments %}
