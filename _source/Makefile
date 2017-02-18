@@ -3,7 +3,7 @@
 
 all:
   # kill $(ps aux | grep '[j]ekyll serve$' | awk '{print $2}')
-	Rscript -e "servr::jekyll('..')"
+	Rscript -e "servr::jekyll('..', command = 'jekyll build')"
 
 clean:
 	rm -r ../_site

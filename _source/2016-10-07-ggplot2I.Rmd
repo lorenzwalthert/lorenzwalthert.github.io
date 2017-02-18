@@ -1,5 +1,5 @@
 ---
-title: "Programming with ggplot - Part I"
+title: "Scalable plotting with ggplot2 - Part I"
 description: How can you take advantage of integrating ggplot2 with core 
   elements of the R language to create more flexible and adaptive plots while 
   reducing redundancy? This series discusses how we can use an lapply approach
@@ -16,7 +16,7 @@ comments: true
 <br/>
 This series discusses how we can use ggplot2 to produce plots for each column 
 of a data frame that depend on characteristics of this column 
-(e.g. the class of a column).
+(e.g. the class of a column) in a scalable manner.
 To this end, we integrate the following concepts / functions:
 
 * the `ggplot2` package
@@ -29,7 +29,7 @@ The reader should be familiar with these concepts, otherwise, Hadley Wickham's
 [Advanced R](http://adv-r.had.co.nz) might be a good starting point to read 
 up on all but the first topic.
 
-The approach discussed here generalizes to other situations in which one want 
+The approach discussed here generalizes to other situations in which one wants
 to customize plots based on the characteristics of input data. 
 
 ## The problem
@@ -48,7 +48,7 @@ head(dta)
 Now, imagine you want a visual summary for each variable. Unfortunately, 
 the variables are not all of the same class. Otherwise, you might transform the 
 data into long format and use facets.
-For the factors, you could do a bar chart, for the integers, you might want to
+For the factors, you could do a bar chart, for the numerical variables, you might want to
 use a density plot. Let's have a look at a first approach. You could do the 
 following for cut and color. 
 ```{r}
@@ -87,7 +87,7 @@ Now, you can note two issues:
 To address the first problem, we can create a function that
 behaves differently depending on whether the input is factorial or numeric.
 ```{r, eval=FALSE}
-# a function that returns geom_histogramm if the input is numberic, 
+# a function that returns geom_density if the input is numeric, 
 # geom_bar otherwise
 geom_hist_or_bar <- function() {
   if(current_class() %in% c("integer", "numeric")) {
@@ -106,13 +106,13 @@ ggplot(dta, aes(cut))   + geom_hist_or_bar()
 ggplot(dta, aes(price)) + geom_hist_or_bar()
 ggplot(dta, aes(carat)) + geom_hist_or_bar()
 ```
-This is a slight improvement to the first solution, because you always call the
+This is a slight improvement on the first solution because you always call the
 same functions for all plots. Hence, we can kind of use an `apply` approach to 
 reduce the redundancy of this problem. You might think of the following:
 ```{r, eval=FALSE}
 lapply(dta, function(g) ggplot(dta, aes(g)) + geom_hist_or_bar)
 ```
-Unfortunately, this does not quite work, because for each iteration in 
+Unfortunately, this does not quite work because for each iteration in 
 `lapply`, `g` will be the actual 
 values from each column, but in `aes`, you need the name of the column, not the 
 actual value. Since there is no way to get from the values to the names, but 
@@ -124,7 +124,7 @@ lapply(names(dta), function(g) ggplot(dta, aes(g)) + geom_hist_or_bar)
 However, we are not quite there yet. Due to non-standard evaluation, we need to 
 further change two things:
 
-* use `_aes` instead of `_aes` so `g` is not actually g, but points to something
+* use `aes_` instead of `aes` so `g` is not actually g, but points to something
   else.
 * use `as.name(g)` instead of `g` because `g` is just the name of an object (i.e. 
   "cut" for the first iteration), not the object itself. 
