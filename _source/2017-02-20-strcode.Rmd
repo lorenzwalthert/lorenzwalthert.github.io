@@ -20,7 +20,7 @@ devtools::install_github("lorenzwalthert/strcode")
 ```
 
 # A concept for code structuring
-he main feature of the package is it's function to insert code breaks. These are helpful in breaking the code down into smaller sections. We suggest three levels of granularity for code structuring, wherein higher-level blocks can contain lower-level blocks:
+The main feature of the package is its function to insert code breaks. These are helpful in breaking the code down into smaller sections. We suggest three levels of granularity for code structuring, wherein higher-level blocks can contain lower-level blocks:
 
 <script src="https://gist.GitHub.com/lorenzwalthert/94c079dfba1d09abe186993f275d67c2.js"></script>
 
