@@ -32,20 +32,20 @@ You can notice from the above that
 
 Every title line ends with `####`. Therefore, the titles are recognized by RStudio as [sections](https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections). This has the advantages that you can get a quick summary of your code in RStudio's code pane as depicted below.
 
-![](https://photos-6.dropbox.com/t/2/AAB4HOOaq7gek9cr3LomIjhjT9cWUAIkO5Etx5K7lqPdSw/12/105424129/png/32x32/1/_/1/2/show_contents.png/EITBzVEY-9ENIAIoAg/zM0ieKNp5Eg99o8AW2ZlO0Bh2YHwMdLJ7gMWTkdsNrc?size=1024x768&size_mode=3)
+![](https://github.com/lorenzwalthert/some_raw_data/blob/master/show_contents.png?raw=true)
 
 In addition, it means that you can fold sections as you can fold function declarations or if statements.
 
-![](https://photos-5.dropbox.com/t/2/AAAcAMtGvUsutCRlTuZshD6AA18Ta2VnBU0STmK1YS7ETw/12/105424129/png/32x32/1/_/1/2/show_fold.png/EITBzVEY-9ENIAIoAg/YC1Omhm6diPWz5RK88mjUxlIsYRzI-hR8Y06TgIBBIk?size=1600x1200&size_mode=3)
+![](https://github.com/lorenzwalthert/some_raw_data/blob/master/show_fold.png?raw=true)
 
 The package `strcode` provides an [RStudio Add-in](https://rstudio.github.io/rstudioaddins/) to insert each of the three separators presented above - with a single click. To invoke the Add-in, simply click on the button *Addins* in your RStudio Window and select the separator you want to insert.
 
-![](https://photos-3.dropbox.com/t/2/AADAtlAKUh6Xx4SnsPWOXE4piq3Lge-24bTziJLGYp3x4w/12/105424129/png/32x32/1/_/1/2/show_insert.png/EITBzVEY-9ENIAIoAg/6Fk6tF324fcQIibaWTg6Zg3w36WFKhSALymZO0RW8eQ?size=1024x768&size_mode=3)
+![](https://github.com/lorenzwalthert/some_raw_data/blob/master/show_insert.png?raw=true)
 
 By default, a Shiny Gadget will open in the viewer pane where you can also specify the title of the section (optional) and whether or not a unique identifier/anchor should be added to the section (see below). 
 
 
-![](https://photos-1.dropbox.com/t/2/AADeAtcbPT-W_V5g65gH-jc3eUrCHAA60_Ef5QR-cPJqGw/12/105424129/png/32x32/1/_/1/2/show_shiny.png/EITBzVEY_NENIAIoAg/uk0OLH0jv58NuW97EuBlo9wFnzqaCfxM5Ij6v3W3wW4?size=1024x768&size_mode=3)
+![](https://github.com/lorenzwalthert/some_raw_data/blob/master/show_shiny.png?raw=true)
 
 If you prefer to insert the separator without the Shiny Gadget, you can change the option `strcode$insert_with_shiny` to `FALSE` which will only insert the break. The separators all have length 80. The value is looked up in the global option `strcode$char_length` and can therefore be changed by the user as well. The length of separators is thought to correspond to the character width limit you use.
 
