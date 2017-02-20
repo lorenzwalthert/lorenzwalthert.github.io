@@ -6,7 +6,7 @@ permalink: /strcode1/
 tags: workflow
 layout: post
 comments: true
-date: "2017-02-18 08:35"
+date: "2017-02-20 20:45"
 ---
 ```{r, include= FALSE}
 op <- options()$strcode
@@ -14,23 +14,23 @@ op$char_length <- 60
 options(strcode = op)
 ```
 
-I am pleased to announce my package strcode, a package that should make structuring code easier. You can install it from GitHub, a CRAN submission is planned at a later stage.
+I am pleased to announce my package `strcode`, a package that should make structuring code easier. You can install it from GitHub, a CRAN submission is planned at a later stage.
 ```{r, eval = FALSE}
 devtools::install_github("lorenzwalthert/strcode")
 ```
 
 # A concept for code structuring
-The main feature of the package is its function to insert code breaks.These are helpful in breaking the code down to smaller sections. We suggest three levels of granularity for code structuring, whereas higher-level blocks can contain lower-level blocks:
+he main feature of the package is it's function to insert code breaks. These are helpful in breaking the code down into smaller sections. We suggest three levels of granularity for code structuring, wherein higher-level blocks can contain lower-level blocks:
 
 <script src="https://gist.GitHub.com/lorenzwalthert/94c079dfba1d09abe186993f275d67c2.js"></script>
 
-You can notice from the above that
+You can notice from the above that:
 
-* The number of `#` used in front of the break character (`___`, `...`, `. .`) corresponds to the level of granularity that is separated.
+* The number of `#`'s used in front of the break character (`___`, `...`, `. .`) correspond to the level of granularity for a code separator.
 * The breaks characters `___`, `...`, `. .` were chosen such that they reflect the level of granularity, namely `___` has a much higher visual density than `. .`. 
 * Each block has an (optional) short title on what that block is about.
 
-Every title line ends with `####`. Therefore, the titles are recognized by RStudio as [sections](https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections). This has the advantages that you can get a quick summary of your code in RStudio's code pane as depicted below.
+Every title line ends with `####`. Therefore, the titles are recognized by RStudio as [sections](https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections). This has the advantage that you can get a quick summary of your code in RStudio's code pane as depicted below.
 
 ![](https://github.com/lorenzwalthert/some_raw_data/blob/master/show_contents.png?raw=true)
 
@@ -55,7 +55,8 @@ Sometimes it is required to refer to a code section, which can be done by a titl
 <script src="https://gist.GitHub.com/lorenzwalthert/1a976cac9dff4e21b22797e567ecb8cc.js"></script>
 
 # Summarizing code
-Once code has been structured with separators introduced above, it can easily be summarized in a compact form. This is particularly handy when the code base is large, when a lot of people work on the code or when new people join a project. The function `sum_str` is designed for the purpose of extracting separators and respective comments, in order to provide high level code summaries. Thanks to RStudio's API, you can even create summaries of the file you are working on, simply by typing `sum_str()` in the console.
+Once code has been structured with the separators introduced above, it can easily be summarized in a compact form. This is particularly handy when the code base is large, when a lot of people work on the code or when new people join a project. The function `sum_str` is designed for the purpose of extracting separators and respective comments, in order to provide high level code summaries. Thanks to RStudio's API, you can even create summaries of the file you are working on, simply by typing `sum_str()` in the console.
+
 The outcome might look like this:
 
 <script src="https://gist.GitHub.com/lorenzwalthert/bf2595631df1212df5e41ef61d149980.js"></script>
@@ -63,12 +64,12 @@ The outcome might look like this:
 `sum_str` is highly customizable and flexible, with a host of options. For example, you can specify to omit level 3 or level 2 sections in the summary, summarizing multiple files at once, writing the summaries to a file and more.
 
 # Insert a code anchor
-Code anchors might prove helpful in other situations where one want to anchor a single line. That is also possible with `strcode`. An example of a code anchor is the following:
+Code anchors might prove helpful in other situations where one wants to anchor a single line. That is also possible with `strcode`. An example of a code anchor is the following:
 
 <script src="https://gist.GitHub.com/lorenzwalthert/f28f17243753b489ebb845698227d0ec.js"></script>
 The hash sequences in strcode are produced with the R package [digest](https://github.com/eddelbuettel/digest).
 
-To wrap it up, strcode tries to make structuring code easy and fun while keeping things simple. Give it a go. Feedback to the package most welcomed. If you find any bugs (in particular in `sum_str`) or if you have any suggestions for extensions of the package, feel free to open an issue on the GitHub [repo](https://github.com/lorenzwalthert/strcode) of the package. 
+To wrap it up, strcode tries to make structuring code easy and fun while keeping things simple. Give it a go. Feedback to the package is most welcome. If you find any bugs (in particular in `sum_str`) or if you have any suggestions for extensions of the package, feel free to open an issue on the GitHub [repo](https://github.com/lorenzwalthert/strcode) of the package. 
 
 # Appendix
 As an appendix to this post, I would like to give a real-world example of how using strcode can improve the legibility of code. 
