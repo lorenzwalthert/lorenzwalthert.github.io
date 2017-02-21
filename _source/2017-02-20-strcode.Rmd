@@ -32,20 +32,20 @@ You can notice from the above that:
 
 Every title line ends with `####`. Therefore, the titles are recognized by RStudio as [sections](https://support.rstudio.com/hc/en-us/articles/200484568-Code-Folding-and-Sections). This has the advantage that you can get a quick summary of your code in RStudio's code pane as depicted below.
 
-![](https://github.com/lorenzwalthert/some_raw_data/blob/master/show_contents.png?raw=true)
+![](https://raw.githubusercontent.com/lorenzwalthert/some_raw_data/master/show_contents.png)
 
 In addition, it means that you can fold sections as you can fold function declarations or if statements.
 
-![](https://github.com/lorenzwalthert/some_raw_data/blob/master/show_fold.png?raw=true)
+![](https://raw.githubusercontent.com/lorenzwalthert/some_raw_data/master/show_fold.png)
 
 The package `strcode` provides an [RStudio Add-in](https://rstudio.github.io/rstudioaddins/) to insert each of the three separators presented above - with a single click. To invoke the Add-in, simply click on the button *Addins* in your RStudio Window and select the separator you want to insert.
 
-![](https://github.com/lorenzwalthert/some_raw_data/blob/master/show_insert.png?raw=true)
+![](https://raw.githubusercontent.com/lorenzwalthert/some_raw_data/master/show_insert.png)
 
 By default, a Shiny Gadget will open in the viewer pane where you can also specify the title of the section (optional) and whether or not a unique identifier/anchor should be added to the section (see below). 
 
 
-![](https://github.com/lorenzwalthert/some_raw_data/blob/master/show_shiny.png?raw=true)
+![](https://raw.githubusercontent.com/lorenzwalthert/some_raw_data/master/show_shiny.png)
 
 If you prefer to insert the separator without the Shiny Gadget, you can change the option `strcode$insert_with_shiny` to `FALSE` which will only insert the break. The separators all have length 80. The value is looked up in the global option `strcode$char_length` and can therefore be changed by the user as well. The length of separators is thought to correspond to the character width limit you use.
 
