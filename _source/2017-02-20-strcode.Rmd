@@ -57,7 +57,7 @@ Sometimes it is required to refer to a code section, which can be done by a titl
 # Summarizing code
 Once code has been structured with the separators introduced above, it can easily be summarized in a compact form. This is particularly handy when the code base is large, when a lot of people work on the code or when new people join a project. The function `sum_str` is designed for the purpose of extracting separators and respective comments, in order to provide high level code summaries. Thanks to RStudio's API, you can even create summaries of the file you are working on, simply by typing `sum_str()` in the console.
 
-The outcome might look like this:
+The outcome might look like the following:
 
 <script src="https://gist.GitHub.com/lorenzwalthert/bf2595631df1212df5e41ef61d149980.js"></script>
 
