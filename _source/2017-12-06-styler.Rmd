@@ -30,14 +30,14 @@ knitr::knit_engines$set(list(
 
 ```
 
-You can install it from CRAN
+You can now install it from CRAN
 
 ```{r, eval = FALSE}
 install.packages("styler")
 ```
 
 
-The package formats R code, by default according to the tidyverse style guide.
+The package formats R code, by default according to the [tidyverse style guide](http://style.tidyverse.org).
 The distinguishing feature of styler is its flexibility. We will introduce some
 of the options below.
 
@@ -188,7 +188,7 @@ style_text(
 # Customizing styler - implementing your own style guide
 
 Not only can you customize styler with the options of `tidyverse_style()`. The 
-real flexiblity of `styler` is supporting third-party style
+real flexibility of `styler` is supporting third-party style
 guides. Technically speaking, a style guide such as `tidyverse_style()` is 
 nothing but a set of transformer functions and options. How you can create
 your own style guide is explained in [this](https://lorenzwalthert.github.io/gsoc2017/articles/customizing_styler.html) 
