@@ -196,7 +196,7 @@ Not only can you customize styler with the options of `tidyverse_style()`. The
 real flexibility of `styler` is supporting third-party style
 guides. Technically speaking, a style guide such as `tidyverse_style()` is 
 nothing but a set of transformer functions and options. How you can create
-your own style guide is explained in [this](https://lorenzwalthert.github.io/gsoc2017/articles/customizing_styler.html) 
+your own style guide is explained in [this](http://styler.r-lib.org/articles/customizing_styler.html) 
 vignette.
 
 # Wrap-up
