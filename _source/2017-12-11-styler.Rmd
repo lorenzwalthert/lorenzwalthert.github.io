@@ -11,7 +11,8 @@ comments: true
 date: "2017-12-11 13:50"
 ---
 
-I am pleased to announce that the R package styler, which I have worked on 
+I am pleased to announce that the R package 
+[styler](https://github.com/r-lib/styler), which I have worked on 
 through [Google Summer of Code 2017](https://lorenzwalthert.github.io/gsoc2017/)
 with [Kirill Müller](https://twitter.com/krlmlr) and [Yihui Xie](https://twitter.com/xieyihui),
 has reached a mature stage.
