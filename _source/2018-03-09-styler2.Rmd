@@ -3,7 +3,7 @@ title: "styler 1.0.1"
 description: styler is a flexible source code fromatter that makes styling 
   files, packages or entire R source trees a breeze. This blog post summarizes 
   changes we made going from styler's initial release to version 1.0.1
-permalink: /stylerpost/
+permalink: /stylerpost2/
 tags: packages
 layout: post
 comments: true
