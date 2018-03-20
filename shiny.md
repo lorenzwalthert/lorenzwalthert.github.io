@@ -10,7 +10,7 @@ Here are some web apps I created with the [shiny package](http://shiny.rstudio.c
 With this app, you can upload a text or a table with words and create a 
 highly cumstomizable wordcloud. And download it.
 
-<a href="https://lorenzwalthert.shinyapps.io/wordcloud/" title="Wordcloud"><img src=" ../images/wordcloud_1.png" width="500" alt="Wordcloud"></a>
+<a href="https://lorenzwalthert.shinyapps.io/wordcloud_Dashboard/" title="Wordcloud"><img src=" ../images/wordcloud_1.png" width="500" alt="Wordcloud"></a>
 
 
 <hr/>
