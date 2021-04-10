@@ -2,4 +2,4 @@
 title: "Lorenz Walthert's old webpage"
 ---
 
-The website is now hosted at https://lorenzwalthert.com. 
+The website is now hosted at https://lorenzwalthert.netlify.app. 
